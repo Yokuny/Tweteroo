@@ -39,27 +39,6 @@
     flex-direction: column;
     width: 100%;
     gap: 1rem;
-
-    font-size: 3rem;
-}
-
-.chat span {
-    width: fit-content;
-
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-    box-shadow: 5px 5px 20px 1px #cccccc2d;
-}
-
-.chat span>span {
-    font-size: 1.4rem;
-    color: yellowgreen;
-    margin: 0 1rem;
-
-    box-shadow: 0;
-    padding: 0;
-    border: transparent;
 }
 
 .form {

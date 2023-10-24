@@ -1,0 +1,29 @@
+p {
+    width: fit-content;
+    padding: 6px 2px;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px 1px #cccccc2d;
+}
+
+p>span>span {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    display: inline-flex;
+    align-items: baseline;
+
+    gap: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+p>span>span>img {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+p>span {
+    font-size: 1.8rem;
+    margin: 0 1rem;
+}
