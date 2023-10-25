@@ -2,10 +2,7 @@
 <div class="arrange">
     <h2>Tweets</h2>
     <div class="chat">
-        <app-tweet></app-tweet>
-        <app-tweet></app-tweet>
-        <app-tweet></app-tweet>
-        <app-tweet></app-tweet>
+        <app-tweet *ngFor="let tweet of tweets" [tweet]="tweet"></app-tweet>
     </div>
     <form class="form">
         <input type="text" name="tweet" id="" placeholder="Mensagem">
