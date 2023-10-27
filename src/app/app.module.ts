@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,7 +10,7 @@ import { TitleComponent } from './title/title.component';
 import { BodyComponent } from './body/body.component';
 import { TweetComponent } from './tweet/tweet.component';
 import { TweetService } from './services/tweet.service';
-import { HttpClientModule } from '@angular/common/http';
+import { SignupService } from './services/signup.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [TweetService],
+  providers: [TweetService, SignupService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

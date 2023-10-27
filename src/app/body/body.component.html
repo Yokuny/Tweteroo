@@ -1,11 +1,21 @@
 <app-title></app-title>
 <div class="arrange">
-    <h2>Tweets</h2>
+        <div class="user-card">
+            <span>{{ user }}</span>
+            <button (click)="onLogout()">
+                <img src="../../assets/logout.svg" alt="log out">
+            </button>
+        </div>
     <div class="chat">
         <app-tweet *ngFor="let tweet of tweets" [tweet]="tweet"></app-tweet>
     </div>
-    <form class="form" [formGroup]="tweetForm" (ngSubmit)="onSubmit()">
-        <input formControlName="newTweet" type="text" name="tweet" placeholder="Mensagem">
-        <button type="submit">Enviar</button>
+    <form [formGroup]="tweetForm" (ngSubmit)="onSubmit()" class="form">
+        <div class="inputs">
+            <input formControlName="tweet" type="text" name="tweet" placeholder="Mensagem" minlength="6" maxlength="255">
+            <button type="submit">Enviar</button>
+        </div>
+        <div class="response">
+            <span>{{ responseMessage }}</span>
+        </div>
     </form>
 </div>

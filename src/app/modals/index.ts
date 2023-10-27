@@ -1,5 +1,12 @@
-export type NewTweet = {
+type User = {
   username: string;
+};
+
+export type NewUser = User & {
+  avatar: string;
+};
+
+export type NewTweet = User & {
   tweet: string;
 };
 

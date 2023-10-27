@@ -5,6 +5,15 @@
     gap: 1rem;
     margin: 2rem 0;
 }
+@media (max-width: 768px) {
+    .title {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0px;
+    }
+}
 
 .title h1 {
     font-size: 5rem;
