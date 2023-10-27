@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { TweetService } from '../services/tweet.service';
 import { Tweets } from '../modals';
 
@@ -8,14 +9,28 @@ import { Tweets } from '../modals';
   styleUrls: ['./body.component.css'],
 })
 export class BodyComponent {
-  constructor(readonly TweetService: TweetService) {}
+  user = 'Felipe';
+
+  tweetForm = this.formBuilder.group({
+    newTweet: '',
+  });
 
   tweets: Tweets = [] as Tweets;
-  user = 'Felipe';
 
   ngOnInit() {
     this.TweetService.fetchTweets(this.user).subscribe((tweets) => {
       this.tweets = tweets;
     });
   }
+
+  onSubmit() {
+    const newTweet = this.tweetForm.value.newTweet || '';
+
+    this.TweetService.postTweet(this.user, newTweet);
+  }
+
+  constructor(
+    readonly TweetService: TweetService,
+    private formBuilder: FormBuilder
+  ) {}
 }

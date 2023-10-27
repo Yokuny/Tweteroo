@@ -4,8 +4,8 @@
     <div class="chat">
         <app-tweet *ngFor="let tweet of tweets" [tweet]="tweet"></app-tweet>
     </div>
-    <form class="form">
-        <input type="text" name="tweet" id="" placeholder="Mensagem">
-        <button>Enviar</button>
+    <form class="form" [formGroup]="tweetForm" (ngSubmit)="onSubmit()">
+        <input formControlName="newTweet" type="text" name="tweet" placeholder="Mensagem">
+        <button type="submit">Enviar</button>
     </form>
 </div>
