@@ -10,6 +10,6 @@ export class SignupService {
 
   postUser(username: string, avatar: string) {
     const body = { username, avatar };
-    return this.http.post<NewUser>(`http://localhost:5012/signup`, body);
+    return this.http.post<NewUser>(`http://localhost:5020/signup`, body);
   }
 }
